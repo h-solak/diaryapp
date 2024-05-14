@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.hasansolak.diaryapp.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_addDiaryFragment"
+            app:destination="@id/addDiaryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_editDiaryFragment"
+            app:destination="@id/editDiaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addDiaryFragment"
+        android:name="com.hasansolak.diaryapp.fragments.AddDiaryFragment"
+        android:label="AddDiaryFragment" >
+        <action
+            android:id="@+id/action_addDiaryFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editDiaryFragment"
+        android:name="com.hasansolak.diaryapp.fragments.EditDiaryFragment"
+        android:label="EditDiaryFragment" >
+        <action
+            android:id="@+id/action_EditDiaryFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+
+        <argument
+            android:name="diary"
+            app:argType="com.hasansolak.diaryapp.model.Diary"
+            app:nullable="true"/>
+    </fragment>
+</navigation>

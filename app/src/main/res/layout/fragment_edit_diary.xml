@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp"
+        tools:context=".UpdateDiaryFragment">
+
+
+        <Button
+            android:id="@+id/btnEditDatePicker"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:text="01/01/2000"
+            android:textSize="32sp"
+            android:textAlignment="textStart"/>
+
+        <!-- Content of the diary  -->
+        <EditText
+            android:id="@+id/editDiaryContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Describe your day"
+            android:gravity="top"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:background="@drawable/borderless"
+            android:fontFamily="@font/montserrat"
+            android:layout_below="@id/btnEditDatePicker"
+            android:layout_marginTop="12dp" />
+
+        <!-- Done button  -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/editDiaryBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:backgroundTint="@color/highlight"
+            android:tintMode="@color/white"
+            android:background="@drawable/borderless"
+            android:src="@drawable/baseline_done_24"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="edit" />
+
+    </RelativeLayout>
+</layout>
